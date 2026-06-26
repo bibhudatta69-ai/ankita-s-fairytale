@@ -6,7 +6,7 @@ export const APP_CONFIG = {
   // 14 May of the year you started dating
   anniversary: new Date("2026-05-14T00:00:00"),
   // Replace with your real WhatsApp number in international format, no + or spaces
-  whatsappNumber: "919999999999",
+  whatsappNumber: "919692207500",
   emergencyMessage:
     "Bibi 🥺❤️ I need you right now. Can we talk when you're free? I just wanted to hear your voice.",
 };
