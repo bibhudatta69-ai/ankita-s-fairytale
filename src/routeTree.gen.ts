@@ -9,8 +9,68 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as StoryRouteImport } from './routes/story'
+import { Route as ReasonsRouteImport } from './routes/reasons'
+import { Route as OpenwhenRouteImport } from './routes/openwhen'
+import { Route as LetterRouteImport } from './routes/letter'
+import { Route as HomeRouteImport } from './routes/home'
+import { Route as GalleryRouteImport } from './routes/gallery'
+import { Route as FutureRouteImport } from './routes/future'
+import { Route as FinalRouteImport } from './routes/final'
+import { Route as FavouritesRouteImport } from './routes/favourites'
+import { Route as CountdownRouteImport } from './routes/countdown'
 import { Route as IndexRouteImport } from './routes/index'
 
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ReasonsRoute = ReasonsRouteImport.update({
+  id: '/reasons',
+  path: '/reasons',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const OpenwhenRoute = OpenwhenRouteImport.update({
+  id: '/openwhen',
+  path: '/openwhen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LetterRoute = LetterRouteImport.update({
+  id: '/letter',
+  path: '/letter',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HomeRoute = HomeRouteImport.update({
+  id: '/home',
+  path: '/home',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FutureRoute = FutureRouteImport.update({
+  id: '/future',
+  path: '/future',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FinalRoute = FinalRouteImport.update({
+  id: '/final',
+  path: '/final',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FavouritesRoute = FavouritesRouteImport.update({
+  id: '/favourites',
+  path: '/favourites',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CountdownRoute = CountdownRouteImport.update({
+  id: '/countdown',
+  path: '/countdown',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +79,172 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/countdown': typeof CountdownRoute
+  '/favourites': typeof FavouritesRoute
+  '/final': typeof FinalRoute
+  '/future': typeof FutureRoute
+  '/gallery': typeof GalleryRoute
+  '/home': typeof HomeRoute
+  '/letter': typeof LetterRoute
+  '/openwhen': typeof OpenwhenRoute
+  '/reasons': typeof ReasonsRoute
+  '/story': typeof StoryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/countdown': typeof CountdownRoute
+  '/favourites': typeof FavouritesRoute
+  '/final': typeof FinalRoute
+  '/future': typeof FutureRoute
+  '/gallery': typeof GalleryRoute
+  '/home': typeof HomeRoute
+  '/letter': typeof LetterRoute
+  '/openwhen': typeof OpenwhenRoute
+  '/reasons': typeof ReasonsRoute
+  '/story': typeof StoryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/countdown': typeof CountdownRoute
+  '/favourites': typeof FavouritesRoute
+  '/final': typeof FinalRoute
+  '/future': typeof FutureRoute
+  '/gallery': typeof GalleryRoute
+  '/home': typeof HomeRoute
+  '/letter': typeof LetterRoute
+  '/openwhen': typeof OpenwhenRoute
+  '/reasons': typeof ReasonsRoute
+  '/story': typeof StoryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/countdown'
+    | '/favourites'
+    | '/final'
+    | '/future'
+    | '/gallery'
+    | '/home'
+    | '/letter'
+    | '/openwhen'
+    | '/reasons'
+    | '/story'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/countdown'
+    | '/favourites'
+    | '/final'
+    | '/future'
+    | '/gallery'
+    | '/home'
+    | '/letter'
+    | '/openwhen'
+    | '/reasons'
+    | '/story'
+  id:
+    | '__root__'
+    | '/'
+    | '/countdown'
+    | '/favourites'
+    | '/final'
+    | '/future'
+    | '/gallery'
+    | '/home'
+    | '/letter'
+    | '/openwhen'
+    | '/reasons'
+    | '/story'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CountdownRoute: typeof CountdownRoute
+  FavouritesRoute: typeof FavouritesRoute
+  FinalRoute: typeof FinalRoute
+  FutureRoute: typeof FutureRoute
+  GalleryRoute: typeof GalleryRoute
+  HomeRoute: typeof HomeRoute
+  LetterRoute: typeof LetterRoute
+  OpenwhenRoute: typeof OpenwhenRoute
+  ReasonsRoute: typeof ReasonsRoute
+  StoryRoute: typeof StoryRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/reasons': {
+      id: '/reasons'
+      path: '/reasons'
+      fullPath: '/reasons'
+      preLoaderRoute: typeof ReasonsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/openwhen': {
+      id: '/openwhen'
+      path: '/openwhen'
+      fullPath: '/openwhen'
+      preLoaderRoute: typeof OpenwhenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/letter': {
+      id: '/letter'
+      path: '/letter'
+      fullPath: '/letter'
+      preLoaderRoute: typeof LetterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/home': {
+      id: '/home'
+      path: '/home'
+      fullPath: '/home'
+      preLoaderRoute: typeof HomeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/future': {
+      id: '/future'
+      path: '/future'
+      fullPath: '/future'
+      preLoaderRoute: typeof FutureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/final': {
+      id: '/final'
+      path: '/final'
+      fullPath: '/final'
+      preLoaderRoute: typeof FinalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favourites': {
+      id: '/favourites'
+      path: '/favourites'
+      fullPath: '/favourites'
+      preLoaderRoute: typeof FavouritesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/countdown': {
+      id: '/countdown'
+      path: '/countdown'
+      fullPath: '/countdown'
+      preLoaderRoute: typeof CountdownRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,17 +257,17 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CountdownRoute: CountdownRoute,
+  FavouritesRoute: FavouritesRoute,
+  FinalRoute: FinalRoute,
+  FutureRoute: FutureRoute,
+  GalleryRoute: GalleryRoute,
+  HomeRoute: HomeRoute,
+  LetterRoute: LetterRoute,
+  OpenwhenRoute: OpenwhenRoute,
+  ReasonsRoute: ReasonsRoute,
+  StoryRoute: StoryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
