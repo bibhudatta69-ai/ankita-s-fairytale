@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import heroAsset from "@/assets/hero-couple.asset.jpeg";
+import heroAsset from "@/assets/hero-couple.jpg";
 import { Sparkly } from "@/components/romantic/chrome";
 import { APP_CONFIG } from "@/lib/app-config";
 
