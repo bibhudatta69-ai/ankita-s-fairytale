@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PageHeader } from "@/components/romantic/chrome";
-import heroAsset from "@/assets/hero-couple.asset.json";
+import heroAsset from "@/assets/hero-couple.asset.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import heroAsset from "@/assets/hero-couple.asset.json";
+import heroAsset from "@/assets/hero-couple.asset.jpeg";
 import { APP_CONFIG } from "@/lib/app-config";
 
 export const Route = createFileRoute("/home")({
